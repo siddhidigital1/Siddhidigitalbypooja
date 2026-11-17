@@ -23,6 +23,7 @@
       --border: #e2e8f0;
       --whatsapp: #25d366;
       --insta: #e1306c;
+      --location: #dc2626;
     }
 
     * {
@@ -225,7 +226,7 @@
     .btn-call  { background: var(--primary); }
     .btn-wa    { background: var(--whatsapp); }
     .btn-insta { background: var(--insta); }
-    .btn-web   { background: var(--dark); }
+    .btn-loc   { background: var(--location); }
 
     /* Section Styling */
     .section {
@@ -565,15 +566,19 @@
         <div class="icon-circle btn-insta"><i class="fa-brands fa-instagram"></i></div>
         Instagram
       </a>
-      <a href="https://siddhidigitalinvite.in/" target="_blank" class="quick-btn">
-        <div class="icon-circle btn-web"><i class="fa-solid fa-globe"></i></div>
-        Website
+      <a href="https://maps.google.com/?q=Shahupuri,+Kolhapur,+Maharashtra" target="_blank" class="quick-btn">
+        <div class="icon-circle btn-loc"><i class="fa-solid fa-location-dot"></i></div>
+        Location
       </a>
     </div>
 
-    <!-- CONTACT & SOCIAL LINKS -->
+    <!-- CONTACT, LOCATION & SOCIAL LINKS -->
     <div class="section">
       <div class="info-list">
+        <a href="https://maps.google.com/?q=Shahupuri,+Kolhapur,+Maharashtra" target="_blank" class="info-row">
+          <i class="fa-solid fa-location-dot" style="color: var(--location);"></i>
+          <span><strong>Location:</strong> Shahupuri, Kolhapur, Maharashtra</span>
+        </a>
         <a href="tel:+919970279238" class="info-row">
           <i class="fa-solid fa-phone"></i>
           <span><strong>WhatsApp & Call:</strong> +91 99702 79238</span>
@@ -614,7 +619,7 @@
         <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--primary); font-size: 13px;"></i>
       </a>
 
-      <a href="https://www.instagram.com/siddhidigital1" target="_blank" class="link-tile" style="margin-bottom: 0;">
+      <a href="https://www.instagram.com/siddhidigital1" target="_blank" class="link-tile">
         <div class="link-tile-left">
           <i class="fa-brands fa-instagram" style="color: var(--insta);"></i>
           <div>
@@ -624,6 +629,17 @@
         </div>
         <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--insta); font-size: 13px;"></i>
       </a>
+
+      <a href="https://maps.google.com/?q=Shahupuri,+Kolhapur,+Maharashtra" target="_blank" class="link-tile" style="margin-bottom: 0;">
+        <div class="link-tile-left">
+          <i class="fa-solid fa-map-location-dot" style="color: var(--location);"></i>
+          <div>
+            <div class="link-tile-title">Find Us on Google Maps</div>
+            <div class="link-tile-desc">Shahupuri, Kolhapur, Maharashtra</div>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--location); font-size: 13px;"></i>
+      </a>
     </div>
 
     <!-- ABOUT SECTION -->
@@ -631,7 +647,7 @@
       <span class="section-tag">About Us</span>
       <div class="section-header">Welcome to Siddhi Digital</div>
       <p style="font-size: 12.5px; color: #475569; line-height: 1.65;">
-        At <strong>Siddhi Digital</strong>, we live by our motto: <em>"Giving Digital Shape to Your Imaginations."</em> We craft memorable <strong>Digital Invitation Cards</strong> for special occasions, build strong brand identities through custom <strong>Business Logos, Posters & Banners</strong>, create high-converting <strong>Business Advertising Videos</strong>, and empower beginners through our practical <strong>Online Graphic Design Starter Course</strong>.
+        Based in <strong>Kolhapur, Maharashtra</strong>, <strong>Siddhi Digital</strong> lives by the motto: <em>"Giving Digital Shape to Your Imaginations."</em> We craft memorable <strong>Digital Invitation Cards</strong> for special occasions, build strong brand identities through custom <strong>Business Logos, Posters & Banners</strong>, create high-converting <strong>Business Advertising Videos</strong>, and empower beginners through our practical <strong>Online Graphic Design Starter Course</strong>.
       </p>
 
       <div class="pill-grid">
@@ -829,7 +845,10 @@
     <!-- FOOTER -->
     <div style="text-align: center; padding: 20px; font-size: 11.5px; color: #94a3b8; background: #0f172a;">
       <div style="color: #fff; font-weight: 700; font-size: 13px; margin-bottom: 2px;">Siddhi Digital</div>
-      <div style="color: #a5b4fc; font-size: 11px; margin-bottom: 8px;">Giving Digital Shape to Your Imaginations</div>
+      <div style="color: #a5b4fc; font-size: 11px; margin-bottom: 4px;">Giving Digital Shape to Your Imaginations</div>
+      <div style="color: #cbd5e1; font-size: 11px; margin-bottom: 8px;">
+        <i class="fa-solid fa-location-dot"></i> Shahupuri, Kolhapur, Maharashtra
+      </div>
       © 2026 Siddhi Digital. All Rights Reserved.
     </div>
 
@@ -894,7 +913,7 @@ _Sent via Siddhi Digital Card_`;
     // WhatsApp Share Button
     function shareOnWhatsApp() {
       const currentUrl = window.location.href;
-      const message = `*Siddhi Digital* - _Giving Digital Shape to Your Imaginations_ ✨\n\n💌 Digital Invitation Cards\n🎨 Business Logo, Posters & Banners\n🎬 Business Advertising Videos\n🎓 Online Graphic Design Starter Course\n\nWebsite: https://siddhidigitalinvite.in/\nInstagram: @siddhidigital1\nDigital Card: ${currentUrl}`;
+      const message = `*Siddhi Digital* - _Giving Digital Shape to Your Imaginations_ ✨\n\n📍 Shahupuri, Kolhapur, Maharashtra\n💌 Digital Invitation Cards\n🎨 Business Logo, Posters & Banners\n🎬 Business Advertising Videos\n🎓 Online Graphic Design Starter Course\n\nWebsite: https://siddhidigitalinvite.in/\nInstagram: @siddhidigital1\nDigital Card: ${currentUrl}`;
       const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     }
@@ -910,7 +929,7 @@ _Sent via Siddhi Digital Card_`;
         phone = '91' + phone;
       }
       const currentUrl = window.location.href;
-      const message = `Hello, check out *Siddhi Digital* (_Giving Digital Shape to Your Imaginations_) for Digital Invitations, Logos, Posters, Ad Videos & Graphic Design Courses:\n\n${currentUrl}\n\nWebsite: https://siddhidigitalinvite.in/`;
+      const message = `Hello, check out *Siddhi Digital* (_Giving Digital Shape to Your Imaginations_) in Kolhapur for Digital Invitations, Logos, Posters, Ad Videos & Graphic Design Courses:\n\n${currentUrl}\n\nWebsite: https://siddhidigitalinvite.in/`;
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     }
 
@@ -944,6 +963,7 @@ FN:Siddhi Digital
 ORG:Siddhi Digital - Giving Digital Shape to Your Imaginations
 TITLE:Digital Invitations, Logo, Posters, Video Ads & Graphic Design Course
 TEL;TYPE=CELL,VOICE:+919970279238
+ADR;TYPE=WORK:;;Shahupuri;Kolhapur;Maharashtra;;India
 URL:https://siddhidigitalinvite.in/
 X-SOCIALPROFILE;type=instagram:https://www.instagram.com/siddhidigital1
 END:VCARD`;
