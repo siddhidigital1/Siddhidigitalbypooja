@@ -72,11 +72,11 @@
       font-size: 14px;
       color: var(--dark);
     }
-    .mini-brand-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    .mini-brand img {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      object-fit: contain;
     }
     .mini-nav-links {
       display: flex;
@@ -110,36 +110,27 @@
       border-radius: 12px;
       backdrop-filter: blur(4px);
     }
-    /* Built-in Monogram Badge (No external image needed) */
-    .monogram-wrap {
-      width: 96px;
-      height: 96px;
+
+    /* Logo Container */
+    .avatar-wrap {
+      width: 112px;
+      height: 112px;
       margin: 0 auto 14px;
       border-radius: 24px;
-      background: linear-gradient(135deg, #ffffff 0%, #eef2ff 100%);
-      border: 3px solid rgba(253, 230, 138, 0.85);
+      background: #ffffff;
+      border: 3px solid rgba(253, 230, 138, 0.9);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    .monogram-letters {
-      font-size: 32px;
-      font-weight: 800;
-      line-height: 1;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: -1px;
-    }
-    .monogram-sub {
-      font-size: 8.5px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      color: var(--dark);
-      margin-top: 3px;
-      text-transform: uppercase;
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 6px;
+      display: block;
     }
 
     .hero h1 {
@@ -528,7 +519,7 @@
     <!-- MINI WEBSITE TOP NAVIGATION -->
     <div class="mini-navbar">
       <div class="mini-brand">
-        <span class="mini-brand-dot"></span> Siddhi Digital
+        <img src="./logo.png" alt="Logo"> Siddhi Digital
       </div>
       <div class="mini-nav-links">
         <a href="#about">About</a>
@@ -541,10 +532,12 @@
     <!-- WEBSITE-LOOK HERO SECTION -->
     <div class="hero" id="home">
       <div class="views-counter"><i class="fa-solid fa-wand-magic-sparkles"></i> Digital Studio</div>
-      <div class="monogram-wrap">
-        <div class="monogram-letters">SD</div>
-        <div class="monogram-sub">Digital</div>
+      
+      <!-- Logo Image -->
+      <div class="avatar-wrap">
+        <img src="./logo.png" alt="Siddhi Digital Logo">
       </div>
+
       <h1>Siddhi Digital</h1>
       <div class="tagline">"Giving Digital Shape to Your Imaginations"</div>
       <div class="sub-role">Digital Invitations • Logos • Posters & Banners • Advertising Videos • Graphic Design Course</div>
